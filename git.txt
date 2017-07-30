@@ -1,0 +1,157 @@
+git init
+git status
+创建文件 a.txt
+git status
+红色-在工作区
+git add a.txt
+git status
+绿色-在暂存区
+git commit a.txt
+弹框-要写messages -  esc：q！
+git commit -m "new file" a.txt
+git status
+vim a.txt
+a
+esc:wq!
+cat a.txt
+git add a.txt
+git commit -m "update01" a.txt
+vim a.txt
+git add a.txt
+git commit -m "update02" a.txt
+.....
+
+git log  查看日志
+ 倒序
+q  退出
+
+vim a.txt
+777
+esc :wq!
+git diff 查看++++的
+vim a.txt
+git add a.txt
+git commit -m "updata 07" a.txt
+git status
+
+
+版本穿梭
+
+cat a.txt
+git reflog
+git reset --hard HEAD^
+cat a.txt
+git reset --hard HEAD^^^
+cat a.txt
+git reflog
+git reset --hard e29fab7
+git reset --hard HEAD~4
+git reset --hard e29fab7
+cat a.txt
+vim a.txt
+git diff 
+git status
+git checkout -- a.txt
+***不可以在master上干活
+删除文件
+git rm b.txt  之后需要commit
+
+*****************创建分支****************
+git branch
+git branch dev  创建分支
+git branch  查看分支
+git checkout dev 切换
+git branch
+vim a.txt
+git add a.txt
+git commit -m 'dev 111'
+cat a.txt
+git checkout master
+git branch
+cat a.txt
+git merge dev 合并
+cat a.txt
+
+*********冲突******
+vim a.txt
+git add a.txt
+git commit -m 'master'
+cat a.txt
+git status
+vim a.txt
+dev
+git add a.txt
+git commit -m "dev" 
+cat a.txt
+git checkout master
+git merge dev
+	conflict
+vim a.txt
+dd 取消掉
+dd
+dd
+
+git status
+git add a.txt
+git commit  -m "merge"(后面不写文件名，表示全部提交，连同错误信息一起提交)
+
+解决完时删除dev分支
+git branch -d dev
+git branch
+
+推送
+git remote add origin https://github.com/qiuhaifeng/oa.git（地址）
+git push –u origin master （或者不加u）
+拉文件
+git pull origin master
+克隆gitHub上的资料
+git clone+地址
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
